@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Создаем плавающие элементы
 function initFloatingElements() {
     const floatingElements = document.getElementById('floatingElements');
-    const symbols = ['😎', '🤪', '🔥', '🌴', '🍹', '👑', '💰', '(～￣▽￣)～', 'o(*￣▽￣*)ブ'];
+    const symbols = ['😎', '🤪', '🔥', '🌴', '🍹', '👑', '💰', '🤮'];
     
     for (let i = 0; i < 20; i++) {
         const element = document.createElement('div');
