@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маями Чмо | Mayami Lox</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <div class="floating-elements" id="floatingElements"></div>
+    
+    <div class="container">
+        <header>
+            <h1>МАЯМИ ЧМО</h1>
+            <p class="subtitle">Mayami Lox Official Website</p>
+            <p>Добро пожаловать в мир Маями!</p>
+        </header>
+
+        <div class="main-content">
+            <div class="card">
+                <h2>Кто такой Маями?</h2>
+                <p>Маями - это легендарная личность интернета, он сочетает в себе стиль, юмор и уникальный подход к качалке.</p>
+                <img src="img/logo.jpg" alt="Mayami Lox" class="lox-image">
+            </div>
+
+            <div class="card">
+                <h2>Философия Маями</h2>
+                <p>Жизнь слишком коротка, чтобы быть серьезным. Наслаждайся каждым моментом, будь собой и не обращай внимания на мнение окружающих. Это главный принцип философии Маями.</p>
+                <ul>
+                    <li>Главное похуй!</li>
+                    <li>Главное похуй!</li>
+                    <li>Главное похуй!</li>
+                    <li>Главное похуй!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="interactive-section">
+            <h2>Генератор Маями</h2>
+            <div class="lox-generator">
+                <button id="generateLox">Сгенерировать Чмо-фразу</button>
+                <div id="loxResult">Нажми кнопку для генерации!</div>
+            </div>
+        </div>
+
+        <div class="interactive-section">
+            <h2>Игра: Поймай Чмо</h2>
+            <div class="game-container">
+                <canvas id="gameCanvas" width="600" height="400"></canvas>
+                <div class="counter">Счет: <span id="score">0</span></div>
+                <button id="startGame">Начать игру</button>
+            </div>
+        </div>
+
+        <div class="interactive-section">
+            <h2>Галерея Маями</h2>
+            <div class="meme-gallery">
+                <div class="meme-item">
+                    <img src="img/1.jpg" alt="Meme 1">
+                </div>
+                <div class="meme-item">
+                    <img src="img/2.jpg" alt="Meme 2">
+                </div>
+                <div class="meme-item">
+                    <img src="img/3.jpg" alt="Meme 3">
+                </div>
+                <div class="meme-item">
+                    <img src="img/4.jpg" alt="Meme 4">
+                </div>
+                <div class="meme-item">
+                    <img src="img/logo.jpg" alt="Meme 5">
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 Маями Чмо | Mayami Lox. Все права защищены (или нет).</p>
+            <p>Сайт создан для развлечения и хорошего настроения!</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

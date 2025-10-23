@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 4rem;
+    text-shadow: 3px 3px 0 #ff00ff, 6px 6px 0 #00ffff;
+    margin-bottom: 10px;
+    animation: titleGlow 2s infinite alternate;
+}
+
+@keyframes titleGlow {
+    from { text-shadow: 3px 3px 0 #ff00ff, 6px 6px 0 #00ffff; }
+    to { text-shadow: 3px 3px 0 #00ffff, 6px 6px 0 #ff00ff; }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+.card h2 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ff00ff;
+    padding-bottom: 10px;
+}
+
+.interactive-section {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.lox-generator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+button {
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#loxResult {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    min-height: 60px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.lox-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff00ff;
+    margin: 20px auto;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.lox-image:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#gameCanvas {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 2px solid #ff00ff;
+    max-width: 100%;
+}
+
+.counter {
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.meme-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.meme-item {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.meme-item:hover {
+    transform: scale(1.05);
+}
+
+.meme-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.floating-element {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.7;
+    animation: float 15s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) rotate(0deg); }
+    100% { transform: translateY(-100px) rotate(360deg); }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 0 #ff00ff, 4px 4px 0 #00ffff;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .interactive-section {
+        padding: 20px;
+    }
+    
+    button {
+        padding: 12px 24px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    #loxResult {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    
+    .lox-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .counter {
+        font-size: 1.5rem;
+        padding: 8px 16px;
+    }
+    
+    .meme-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    
+    .meme-item img {
+        height: 120px;
+    }
+    
+    header {
+        padding: 20px 0;
+    }
+    
+    footer {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .card h2 {
+        font-size: 1.3rem;
+    }
+    
+    #gameCanvas {
+        height: 250px;
+    }
+    
+    .meme-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .floating-element {
+        font-size: 1.5rem;
+    }
+}
