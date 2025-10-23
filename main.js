@@ -242,41 +242,41 @@ function addSmoothScrolling() {
 }
 
 // Добавляем обработчик для кнопки "Наверх"
-function addBackToTop() {
-    const backToTop = document.createElement('button');
-    backToTop.textContent = '↑ Наверх';
-    backToTop.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: linear-gradient(to right, #ff00ff, #00ffff);
-        border: none;
-        padding: 10px 15px;
-        border-radius: 50px;
-        color: white;
-        cursor: pointer;
-        display: none;
-        z-index: 1000;
-        font-weight: bold;
-    `;
+// function addBackToTop() {
+//     const backToTop = document.createElement('button');
+//     backToTop.textContent = '↑ Наверх';
+//     backToTop.style.cssText = `
+//         position: fixed;
+//         bottom: 20px;
+//         right: 20px;
+//         background: linear-gradient(to right, #ff00ff, #00ffff);
+//         border: none;
+//         padding: 10px 15px;
+//         border-radius: 50px;
+//         color: white;
+//         cursor: pointer;
+//         display: none;
+//         z-index: 1000;
+//         font-weight: bold;
+//     `;
     
-    document.body.appendChild(backToTop);
+//     document.body.appendChild(backToTop);
     
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTop.style.display = 'block';
-        } else {
-            backToTop.style.display = 'none';
-        }
-    });
+//     window.addEventListener('scroll', function() {
+//         if (window.pageYOffset > 300) {
+//             backToTop.style.display = 'block';
+//         } else {
+//             backToTop.style.display = 'none';
+//         }
+//     });
     
-    backToTop.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
+//     backToTop.addEventListener('click', function() {
+//         window.scrollTo({
+//             top: 0,
+//             behavior: 'smooth'
+//         });
+//     });
+// }
 
 // Инициализация дополнительных функций
 document.addEventListener('DOMContentLoaded', function() {
@@ -308,41 +308,41 @@ function initScrollAnimations() {
 document.addEventListener('DOMContentLoaded', initScrollAnimations);
 
 // Функция для смены темы (дополнительная фича)
-function initThemeToggle() {
-    const themeToggle = document.createElement('button');
-    themeToggle.textContent = '🌙 Сменить тему';
-    themeToggle.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: rgba(0,0,0,0.7);
-        border: 2px solid #ff00ff;
-        padding: 10px 15px;
-        border-radius: 50px;
-        color: white;
-        cursor: pointer;
-        z-index: 1000;
-        font-weight: bold;
-    `;
+// function initThemeToggle() {
+//     const themeToggle = document.createElement('button');
+//     themeToggle.textContent = '🌙 Сменить тему';
+//     themeToggle.style.cssText = `
+//         position: fixed;
+//         top: 20px;
+//         right: 20px;
+//         background: rgba(0,0,0,0.7);
+//         border: 2px solid #ff00ff;
+//         padding: 10px 15px;
+//         border-radius: 50px;
+//         color: white;
+//         cursor: pointer;
+//         z-index: 1000;
+//         font-weight: bold;
+//     `;
     
-    document.body.appendChild(themeToggle);
+//     document.body.appendChild(themeToggle);
     
-    let isDarkTheme = true;
+//     let isDarkTheme = true;
     
-    themeToggle.addEventListener('click', function() {
-        isDarkTheme = !isDarkTheme;
+//     themeToggle.addEventListener('click', function() {
+//         isDarkTheme = !isDarkTheme;
         
-        if (isDarkTheme) {
-            // Темная тема
-            document.body.style.background = 'linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d)';
-            themeToggle.textContent = '🌙 Сменить тему';
-        } else {
-            // Светлая тема
-            document.body.style.background = 'linear-gradient(135deg, #667eea, #764ba2, #f093fb)';
-            themeToggle.textContent = '☀️ Сменить тему';
-        }
-    });
-}
+//         if (isDarkTheme) {
+//             // Темная тема
+//             document.body.style.background = 'linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d)';
+//             themeToggle.textContent = '🌙 Сменить тему';
+//         } else {
+//             // Светлая тема
+//             document.body.style.background = 'linear-gradient(135deg, #667eea, #764ba2, #f093fb)';
+//             themeToggle.textContent = '☀️ Сменить тему';
+//         }
+//     });
+// }
 
-// Инициализация переключателя темы
-document.addEventListener('DOMContentLoaded', initThemeToggle);
+// // Инициализация переключателя темы
+// document.addEventListener('DOMContentLoaded', initThemeToggle);
